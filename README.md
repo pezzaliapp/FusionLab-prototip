@@ -20,43 +20,15 @@ FusionLab è un'app installabile (PWA) che funziona **offline**. Contiene tre li
 | `manifest.webmanifest` | Rende l'app installabile (nome, icone, colori). |
 | `sw.js` | Service worker: salva l'app per l'uso **offline**. |
 | `icons/` | Le icone dell'app (192, 512, maskable). |
-| `.nojekyll` | Dice a GitHub Pages di servire i file così come sono. |
+| `.nojekyll` | Serve i file così come sono, senza elaborazioni. |
 
-Tutti i percorsi sono **relativi**, quindi l'app funziona anche in una sottocartella (es. `tuonome.github.io/FusionLab/`).
-
----
-
-## Pubblicare su GitHub Pages (ottenere il link)
-
-### Metodo A — dal sito, senza terminale (consigliato)
-
-1. Vai su **github.com** → **New repository**. Dai un nome, es. `FusionLab`. Mettilo **Public**. Crea.
-2. Nella pagina del repo clicca **Add file → Upload files**.
-3. Trascina **tutto** il contenuto di questa cartella (`index.html`, `manifest.webmanifest`, `sw.js`, la cartella `icons/`, e `.nojekyll`). ⚠️ Carica i *file*, non la cartella che li contiene: alla radice del repo devi vedere direttamente `index.html`.
-4. **Commit changes**.
-5. Vai in **Settings → Pages**. Sotto *Build and deployment* scegli **Deploy from a branch**, branch **`main`**, cartella **`/ (root)`**. Salva.
-6. Dopo ~1 minuto in cima alla pagina Pages comparirà il link:
-   **`https://TUONOME.github.io/FusionLab/`** ← questo è il link da condividere.
-
-### Metodo B — da terminale (git)
-
-```bash
-cd fusionlab                      # entra nella cartella con i file
-git init
-git add .
-git commit -m "FusionLab PWA"
-git branch -M main
-git remote add origin https://github.com/TUONOME/FusionLab.git
-git push -u origin main
-```
-
-Poi attiva le Pages come al passo 5 del Metodo A.
+Tutti i percorsi sono **relativi**, quindi l'app funziona sia alla radice del sito sia in una sottocartella.
 
 ---
 
 ## Installare l'app
 
-Apri il link su telefono o desktop:
+Apri il link dell'app su telefono o desktop:
 
 - **Android / Chrome / Edge:** comparirà *«Installa app»* (o menu ⋮ → *Installa*).
 - **iPhone / Safari:** tasto *Condividi* → *Aggiungi a Home*.
@@ -80,5 +52,5 @@ Così i dispositivi già installati scaricano la nuova versione invece di servir
 
 ## Note tecniche
 
-- Il service worker richiede **HTTPS**: GitHub Pages lo fornisce automaticamente. In locale funziona solo via `http://localhost` (non aprendo il file con doppio clic `file://`).
+- Il service worker richiede **HTTPS**: va bene qualunque hosting che lo fornisca. In locale funziona solo via `http://localhost` (non aprendo il file con doppio clic `file://`).
 - Per provare in locale: `python3 -m http.server` nella cartella, poi apri `http://localhost:8000`.
