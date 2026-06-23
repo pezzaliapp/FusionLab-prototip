@@ -1,19 +1,25 @@
 {
-  "name": "FusionLab — Accendi una stella in tasca",
+  "name": "FusionLab — Simulatore di fusione",
   "short_name": "FusionLab",
-  "description": "Simulatore di fusione nucleare: muovi i parametri (temperatura, densità, confinamento, campo magnetico) e raggiungi il break-even Q ≥ 1. Include la guida per costruire la console-gioco e l'ABC della fisica.",
-  "lang": "it",
-  "dir": "ltr",
+  "description": "Simulatore didattico di fusione nucleare: parametri, indice di Lawson, Q e break-even. Con manuale e ABC.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "orientation": "any",
+  "orientation": "portrait",
   "background_color": "#07101d",
   "theme_color": "#07101d",
-  "categories": ["education", "science", "games"],
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }
